@@ -1,9 +1,5 @@
 # CarND-Behavioral-Cloning
 
-<span style="color: darkgrey">Behavioral Cloning</span>
-<br>
-<br>
-<br>
 <h3>
         Solution Design
 </h3>

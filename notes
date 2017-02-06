@@ -1,0 +1,60 @@
+QUICK REF
+_______________________________________________________________
+
+Initial steps:
+	1) Determine shape of weights (height, width, depth, #_of_filters)
+		--> if not beginning, depth = previous # of filters
+	2) Determine output dimensions
+	3) Determine pooling output dimensions
+
+
+LAYER 1 CONVOLUTIONAL
+_______________________________________________________________
+
+1) INPUT 
+	`tf.nn.conv2d` requires the input be 4D (batch_size, height, width, depth)
+
+tf.nn.conv2d(input, weight, strides, padding)
+	where:
+ 		-- input (image) = tf.placeholder(tf.float32, shape=[None, image_width, image_height, color_channels])
+		-- weight (filter) = tf.Variable(tf.truncated_normal([filter_size_width, filter_size_height, color_channels, k_output]))
+		-- TensorFlow uses a stride for each input dimension, [batch, input_height, input_width, input_channels].
+
+2) OUTPUT -->conv1
+
+	HxWxD (where D = # of filters)
+
+P = padding, S = stride
+ new_height = (input_height - filter_height + 2 * P)/S + 1
+ new_width = (input_width - filter_width + 2 * P)/S + 1
+	
+
+The shape of the filter bias is (output_depth,))
+	--> F_b = tf.Variable(tf.zeros(3))
+
+
+
+
+LAYER 2 ACTIVATION
+_________________________________________________________________
+
+1) tf.nn.relu(conv1)
+
+
+LAYER 3 POOLING
+__________________________________________________________________
+
+
+2) INPUT <--Convolutional output goes in here
+
+tf.nn.max_pool(conv1, ksize=[1, 2, 2, 1], strides=[1,2,2,1], padding='VALID')
+	--> [?, filter_width, filter_height, ?] 
+
+2) OUTPUT
+
+	HxWxD (where D = input D)
+
+   new_height = (input_height - filter_height)/S + 1
+   new_width = (input_width - filter_width)/S + 1
+
+

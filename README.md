@@ -14,7 +14,7 @@ This project uses a Keras convolutional neural network with eight layers. After 
 </span>
 <br>
 <span>Below you will find a graph representation of the model. Also, the size of each layer is listed below.</span>
-<br>
+<br><br>
 <img src="model.png">
 
 <h3>Training Process</h3>

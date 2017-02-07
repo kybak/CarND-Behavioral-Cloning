@@ -24,7 +24,7 @@ The training process uses Keras' fit_generator to feed batches of images to the 
 <br><br>
 <span>All of the data was recorded with a keyboard. I did not have the luxury of a joy stick and it was just too difficult to use my mouse pad. This required a fairly large dataset of about 20,000 images. A lot of work was done to balance the steering angles by training the car to recenter when it moved towards the lines. When testing the car did not once cross the side lines. </span>
 <br><br>
-<span>From the graph below one can see the difference between a dataset including steering angles of zero and one without. Leaving out data with zero steering angles led to much more training on images that mattered. Intuitively this makes sense because the goal is to teach the car proper steering angles and if the angle is non existant then it is irrelevant to the task at hand. </span>
+<span>From the graph below one can see the difference between a dataset including steering angles of zero and one without. Leaving out data with zero steering angles led to much more training on images that mattered. Intuitively this makes sense because the goal is to teach the car proper steering angles and if the angle is non-existent then it is irrelevant to the task at hand. </span>
 <br><br>
 <img src="steering_angles.png">
 <img src="steering_angles_no_zero.png">

@@ -31,9 +31,9 @@ The training process uses Keras' fit_generator to feed batches of images to the 
 <br>
 <span>Below are sample images that portray the process of balancing the data. I would drive to the edge and start recording so that the training set conists of many images like the ones below. When it is confronted with a situation where it is close to the line it knows to turn pretty sharply (.8 - 1) towards the center of the road. </span>
 <br>
-<span>Steering angle: -.8 (Off center, hard left to recenter)</span>
+<span>Steering angle: -.8 (Off center, hard left to recenter)</span><br>
 <img src="negpoint8.jpg"><br><br>
-<span>Steering angle: -.11 (Nearly center, move foward and gradually follow the turn)</span>
+<span>Steering angle: -.11 (Nearly center, move foward and gradually follow the turn)</span><br>
 <img src="negpoint8.jpg"><br><br>
-<span>Steering angle: .9 (Off center, hard right to recenter)</span>
+<span>Steering angle: .9 (Off center, hard right to recenter)</span><br>
 <img src="point9.jpg"><br><br>
